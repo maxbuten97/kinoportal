@@ -125,8 +125,8 @@ export class MovieService {
                     .where(queryWhereJoined)
                     .getMany();
             }
-            if(!movies) return HttpStatus.NOT_FOUND;
-            return movies
+            
+            return movies;
         } catch (e) {
             return {
                 status: e.status,
